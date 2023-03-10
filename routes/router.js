@@ -36,6 +36,7 @@ catch(err){
 route.post('/login',async(req,res)=>{
     try{
         const {email,password}=req.body
+        console.log(email)
         const logi=await user.find({"email":email})
         if(logi.length==1)
         {
